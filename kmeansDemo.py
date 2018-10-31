@@ -30,10 +30,8 @@ while not crash:
             mouse = pygame.mouse.get_pos()
             xs.append([mouse[0],mouse[1]])
             X= np.array(xs)
-            #preprocessing.scale(X)
             if len(xs)>=n_clusters:
                 clf.fit(X)
-                #print(X)
                 labels = clf.labels_
                 centroids = clf.cluster_centers_
                 print(centroids)
